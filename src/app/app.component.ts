@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   title = "Noah's Guitars"
   guitars: any
   guitarSchema: any
-  guitarTileFields: string[] = ['color', 'condition', 'price']
+  guitarTileFields: string[] = ['color', 'condition', 'price', 'year']
 
   ngOnInit(): void {
 
