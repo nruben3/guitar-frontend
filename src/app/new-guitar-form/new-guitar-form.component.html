@@ -17,7 +17,7 @@
     <span matTextPrefix>$&nbsp;</span>
     <span matTextSuffix>.00</span>
   </mat-form-field>
-  <mat-form-field class="date-example" appearance="fill">
+  <mat-form-field appearance="fill">
     <mat-label>{{guitarSchema.year.options.alias}}</mat-label>
     <input matInput [matDatepicker]="dp" placeholder="Year" formControlName="year">
     <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
@@ -30,11 +30,11 @@
   <mat-form-field appearance="fill">
     <mat-label>{{guitarSchema.condition.options.alias}}</mat-label>
     <mat-select formControlName="condition">
-      <mat-option value="mint">Mint</mat-option>
-      <mat-option value="great">Great</mat-option>
-      <mat-option value="good">Good</mat-option>
-      <mat-option value="fair">Fair</mat-option>
-      <mat-option value="worn">Worn</mat-option>
+      <mat-option value="Mint">Mint</mat-option>
+      <mat-option value="Great">Great</mat-option>
+      <mat-option value="Good">Good</mat-option>
+      <mat-option value="Fair">Fair</mat-option>
+      <mat-option value="Worn">Worn</mat-option>
     </mat-select>
   </mat-form-field>
   <br>

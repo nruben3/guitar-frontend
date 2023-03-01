@@ -1,6 +1,7 @@
 .mat-mdc-form-field {
     margin-right: 8px;
     width:400px;
+    height:78px;
 }
 
 .money-input {
@@ -18,10 +19,6 @@ input.money-input::-webkit-inner-spin-button {
   
 .example-month-picker .mat-calendar-arrow {
     display: none;
-}
-
-.date-example {
-    height:78px;
 }
 
 
