@@ -1,0 +1,28 @@
+<form [formGroup]="guitarFormGroup">
+  <mat-form-field appearance="fill">
+    <mat-label>{{guitarSchema.brand.options.alias}}</mat-label>
+    <input matInput type="text" formControlName='brand'/>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>{{guitarSchema.model.options.alias}}</mat-label>
+    <input matInput type="text" formControlName='model'/>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>{{guitarSchema.color.options.alias}}</mat-label>
+    <input matInput type="text" formControlName='color'/>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>{{guitarSchema.price.options.alias}}</mat-label>
+    <input matInput type="number" formControlName='price'/>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>{{guitarSchema.year.options.alias}}</mat-label>
+    <input matInput type="text" formControlName='year'/>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>{{guitarSchema.condition.options.alias}}</mat-label>
+    <input matInput type="text" formControlName='condition'/>
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+</form>

@@ -1,0 +1,30 @@
+mat-grid-list {
+    margin: 10px;
+}
+
+.mat-mdc-form-field {
+    margin-right: 8px
+}
+
+.add-guitar-form {
+    margin: 10px
+}
+
+.guitar-expansion-panel {
+    width: 99%;
+    height: 99%;
+}
+
+.guitar-title {
+    font-size: x-large;
+}
+
+.example-action-buttons {
+    padding-bottom: 20px;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+

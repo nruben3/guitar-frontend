@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <span>{{ title }}</span>
+</mat-toolbar>
+
+<mat-expansion-panel class="add-guitar-form">
+  <mat-expansion-panel-header [style.font-size]="'large'">
+    <mat-panel-title>Add New Guitar</mat-panel-title>
+  </mat-expansion-panel-header>
+  <app-new-guitar-form (formSubmitted)="loadGuitarList()"></app-new-guitar-form>
+</mat-expansion-panel>
+
+<mat-grid-list cols="5" rowHeight="5:6" gutterSize="10">
+    <mat-grid-tile *ngFor="let guitar of guitars">
+      <mat-expansion-panel class="guitar-expansion-panel">
+        <mat-expansion-panel-header collapsedHeight="100%">
+          <mat-panel-title class="guitar-title">{{ guitar.brand + " " + guitar.model }}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list-item *ngFor="let field of guitarTileFields">
+          {{guitarSchema[field].options.alias}}: {{guitar[field]}}
+        </mat-list-item>
+        <button mat-raised-button color='primary' (click)="onDelete(guitar._id)">Delete Guitar</button>
+      </mat-expansion-panel>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<router-outlet></router-outlet>
