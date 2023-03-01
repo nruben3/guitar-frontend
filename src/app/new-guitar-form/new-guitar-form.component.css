@@ -1,3 +1,27 @@
 .mat-mdc-form-field {
-    margin-right: 8px
+    margin-right: 8px;
+    width:400px;
 }
+
+.money-input {
+    text-align: right
+}
+
+input.money-input::-webkit-outer-spin-button,
+input.money-input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.example-month-picker .mat-calendar-period-button {
+    pointer-events: none;
+}
+  
+.example-month-picker .mat-calendar-arrow {
+    display: none;
+}
+
+.date-example {
+    height:78px;
+}
+
+

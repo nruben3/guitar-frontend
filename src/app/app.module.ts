@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { NewGuitarFormComponent } from './new-guitar-form/new-guitar-form.component';
 
 @NgModule({
@@ -33,7 +34,8 @@ import { NewGuitarFormComponent } from './new-guitar-form/new-guitar-form.compon
     MatButtonModule,
     MatSelectModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

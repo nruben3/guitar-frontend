@@ -11,17 +11,31 @@
     <mat-label>{{guitarSchema.color.options.alias}}</mat-label>
     <input matInput type="text" formControlName='color'/>
   </mat-form-field>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill" floatLabel="always">
     <mat-label>{{guitarSchema.price.options.alias}}</mat-label>
-    <input matInput type="number" formControlName='price'/>
+    <input matInput type="number" class="money-input" placeholder="0" formControlName='price'/>
+    <span matTextPrefix>$&nbsp;</span>
+    <span matTextSuffix>.00</span>
   </mat-form-field>
-  <mat-form-field appearance="fill">
+  <mat-form-field class="date-example" appearance="fill">
     <mat-label>{{guitarSchema.year.options.alias}}</mat-label>
-    <input matInput type="text" formControlName='year'/>
+    <input matInput [matDatepicker]="dp" placeholder="Year" formControlName="year">
+    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+    <mat-datepicker #dp
+      startView="multi-year"
+      (yearSelected)="chosenYearHandler($event, dp)"
+      panelClass="example-month-picker">
+    </mat-datepicker>
   </mat-form-field>
   <mat-form-field appearance="fill">
     <mat-label>{{guitarSchema.condition.options.alias}}</mat-label>
-    <input matInput type="text" formControlName='condition'/>
+    <mat-select formControlName="condition">
+      <mat-option value="mint">Mint</mat-option>
+      <mat-option value="great">Great</mat-option>
+      <mat-option value="good">Good</mat-option>
+      <mat-option value="fair">Fair</mat-option>
+      <mat-option value="worn">Worn</mat-option>
+    </mat-select>
   </mat-form-field>
   <br>
   <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
