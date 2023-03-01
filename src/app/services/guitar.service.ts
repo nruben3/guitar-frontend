@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environments.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GuitarService {
-  private url = 'http://localhost:3100/api'
+  private url = environment.apiURL
   
   constructor(private httpClient: HttpClient) { }
 
